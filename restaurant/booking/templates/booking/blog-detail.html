@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Page Title -->
+    <title>Royal</title>
+    <!-- Favicon -->
+      <link rel="icon" href="{% static 'booking\img\favicon.ico' %}">
+    <!-- Bundle -->
+     <link rel="stylesheet" href="{% static 'booking\css\bundle.min.css' %}">
+    <!-- Plugin Css -->
+     <link rel="stylesheet" href="{% static 'booking\css\revolution-settings.min.css' %}">
+    <link rel="stylesheet" href="{% static 'booking\css\jquery.fancybox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'booking\css\owl.carousel.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'booking\css\swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'booking\css\cubeportfolio.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'booking\css\LineIcons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'booking\css\jquery-ui.bundle.css' %}">
+      <link rel="stylesheet" href="{% static 'booking\css\select2.min.css' %}">
+<!--    <link rel="stylesheet" href="../vendor/css/animate.css">-->
+    <!-- Style Sheet -->
+   <link rel="stylesheet" href="{% static 'booking\css\style.css' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="90" class="position-relative">
+
+<!--Preloader-->
+
+<!--<div class="loader" id="loader-fade">-->
+<!--    <div class="loader-wrapper">-->
+<!--          <img src="{% static 'booking\img\survival.png' %}"alt="image">-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;End Preloader&ndash;&gt;-->
+
+<div class="wrapper">
+
+    <!--Header Section-->
+    <header class="header-with-topbar style-two">
+        <div class="top-header-area d-none d-lg-inline-block transparent-bg center-logo">
+            <div class="container">
+                <div class="row">
+                    <a href="#home" class="logo link" title="logo">
+
+                        <img src= "{% static 'booking\img\lo.png' %}" alt="logo" title="Logo" class="logo-default">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-top-default navbar-expand-lg full-nav center-logo nav-line">
+            <div class="container">
+                <a class="logo link" href="javascript:void(0)">
+                    <img src= "{% static 'booking\img\lo.png' %}" alt="logo" title="Logo" class="logo-default d-lg-none">
+                    <img src= "{% static 'booking\img\lo.png' %}" alt="logo" title="Logo" class="logo-scrolled">
+                </a>
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link link" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="{% url 'home' %}">Our Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="{% url 'home' %}">Delicious Food</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link link" href="{% url 'home' %}">Mega Deal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link active" href="{% url 'blog' %}">Our Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="{% url 'home' %}">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social_icons d-none d-md-block">
+                    <ul>
+                        <li><a href="#." class="facebook-bg-hvr"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
+                        <li><a href="#." class="twitter-bg-hvr"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
+                        <li><a href="#." class="linkedin-bg-hvr"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> </li>
+                        <li><a href="#." class="instagram-bg-hvr"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
+                    </ul>
+                </div>
+
+                <div class="side-nav-btn" id="sidemenu_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Side Menu -->
+        <div class="side-menu dnone">
+            <div class="inner-wrapper nav-icon">
+                <span class="btn-close link" id="btn_sideNavClose"></span>
+                <nav class="side-nav w-100">
+                    <div class="navbar-nav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link link active" href="..\index-food.html#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="..\index-food.html#food">Our Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="..\index-food.html#booking">Delicious Food</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="..\index-food.html#deal">Mega Deal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="..\index-food.html#blog">Our Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link" href="..\index-food.html#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="side-footer text-white w-100">
+                    <ul class="social-icons-simple">
+                        <li class="side-menu-icons"><a href="javascript:void(0)" class="facebook-bg-hvr"><i class="fab fa-facebook-f color-white"></i> </a> </li>
+                        <li class="side-menu-icons"><a href="javascript:void(0)" class="twitter-bg-hvr"><i class="fab fa-twitter color-white"></i> </a> </li>
+                        <li class="side-menu-icons"><a href="javascript:void(0)" class="linkedin-bg-hvr"><i class="fab fa-linkedin-in color-white"></i> </a> </li>
+                        <li class="side-menu-icons"><a href="javascript:void(0)" class="instagram-bg-hvr"><i class="fab fa-instagram color-white"></i> </a> </li>
+
+                    </ul>
+                    <p class="text-white">&copy; 2022 Royal. Made With Love by Survival</p>
+                </div>
+            </div>
+        </div>
+        <a id="close_side_menu" href="javascript:void(0);"></a>
+        <!--Side Menu-->
+    </header>
+    <!--End Header Section-->
+
+
+    <!--blog header-->
+
+    <section class="blog-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="text-capitalize mb-20 text-center text-white">Blog <span class="text-white">Detail</span></h2>
+                    <h5 class="text-white text-center">We Serve The Best Food In City</h5>
+                    <div class="page_nav">
+                        <a href="blog.html" class="text-white blog-15">Home</a> <span class="text-white blog-15"><i class="fa fa-angle-double-right text-white"></i>Blog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--end blog header-->
+
+    <!-- our client -->
+    <section class="our-client">
+        <h2 class="d-none" aria-hidden="true">slider</h2>
+        <div class="container">
+            <div class="row heading-space">
+                <div class="col-md-12 col-sm-12">
+                    <div class="owl-carousel partners-slider">
+                        <div class="item">
+                            <div class="logo-item"> <img alt="image" src="{% static 'booking\img\blog-slider1.jpg' %}"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-item"><img alt="image" src="{% static 'booking\img\blog-slider2.jpg' %}"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-item"> <img alt="image" src="{% static 'booking\img\blog-slider3.jpg' %}"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-item"><img alt="image" src="{% static 'booking\img\blog-slider4.jpg' %}"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-item"> <img alt="image" src="{% static 'booking\img\blog-slider5.jpg' %}"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-item"><img alt="image" src="{% static 'booking\img\blog-slider6.jpg' %}"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-item"> <img alt="image" src="{% static 'booking\img\blog-slider7.jpg' %}"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-item"><img alt="image" src="{% static 'booking\img\blog-slider8.jpg' %}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+
+                    <article class="blog_item heading_space item_padding">
+                        <div class="image-blog pb-20">
+
+                            <img src="{{post.photo.url}}" alt="blog">
+                        </div>
+                        <div class="reser-blog">
+                        <h3 class="grey my-3"> <span class="text-gradient">{{post.title}}</span> </h3>
+                        </div>
+                        <div class="comment-text py-2">
+                            <ul class="comment mb-20">
+                                <li><a class="#."><i class="lni-calendar"> {{post.created_on}}</i></a></li>
+                                <li><a class="#."><i class="lni-comment"> {{c}}</i></a></li>
+                                <li><a class="#."><i class="lni-user"> {{post.author}}</i></a></li>
+                            </ul>
+
+                        </div>
+                        <p class="para-color-2 align-left text-11 mb-20">{{post.content}}</p>
+
+                    </article>
+                    <div class="post-shareit share-center text-11">
+                        <strong class="d-inline-block align-middle mb-2">Share:</strong>
+                        <div class="contact-social-icon pb-10">
+                            <ul class="social-icons mb-0">
+                                <li><a href="#." class="facebook-bg-hvr"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
+                                <li><a href="#." class="twitter-bg-hvr"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
+                                <li><a href="#." class="linkedin-bg-hvr"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> </li>
+                                <li><a href="#." class="instagram-bg-hvr"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hr-line2 mb-20"></div>
+                    <article>
+
+                        <div class="reser-blog">
+
+                        <h3 class="text-capitalize mb-20 Roboto">{{c}} <span class="text-gradient">Comments</span></h3>
+                        </div>
+                        {%for comment in post.comments.all %}
+                        <div class="profile_border">
+                            <div class="profile top20 bottom20">
+                                <div class="p_pic"><img src="{% static 'booking\img\testimonial-1.png' %}" alt="instructure"></div>
+                                <div class="profile_text">
+                                    <h5><strong class="text-uppercase green blog-pic">{{comment.created_by}}</strong> - <span class="text-center text-capitalize blog-pic"> {{comment.name}}</span></h5>
+                                    <ul class="comment">
+                                        <li><a class="a-recent" href="#.">{{comment.date_added}}</a></li>
+                                    </ul>
+                                    <p class="para-color para-align mb-2">{{comment.content}}</p>
+                                    <a class="readmore para-color text-capitalize green" href="{% url 'comment' comment.id %}" onclick="return confirm('Are you sure?')">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+{%endfor%}
+                        <h3 class="my-4 center-leave">Comment<span class="divider-left gradient-bg1"></span></h3>
+                       <form class="findus wow fadeInUp" data-wow-delay="400ms" method="POST" action="{% url 'add_comment' post.slug %}" >
+                            {%csrf_token%}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-20">
+                                        <input type="text" class="form-control para-color" placeholder="Name" name="Name" required="" >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control para-color" placeholder="Email" name="Email" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea placeholder="Comment" name="Comment"></textarea>
+                                    <div class="text-1 text-11 margin-sm">
+                                        <button type="submit" class="btn btn-green btn-large rev-slider btn-rounded w-100">post your comment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="text-left">
+                        <aside class="sidebar padding-bottom">
+
+                            <div class="widget heading_space">
+                                <h4 class="text-capitalize darkcolor bottom20 align-left text-11">Recent Post</h4>
+                                 {%for i in posts|slice:"0:4"%}
+                                <div class="single_post d-flex align-items-center bottom15 justify-content-center justify-content-lg-start align-items-lg-start">
+                                    <a href="#." class="post"><img src="{{i.photo.url}}" alt="post image"></a>
+                                    <div class="text-1">
+                                        <a class="a-recent text-capitalize" href="#.">{{i.title}}</a>
+                                        <span class="para-color">{{i.created_on}}</span>
+                                    </div>
+                                </div>
+{%endfor%}
+                            </div>
+
+                            <div class="widget heading_space margin0">
+                                <h4 class="darkcolor bottom20 align-left text-11">Categories</h4>
+                                {%for cat in categ%}
+                                <ul class="webcats pb-10">
+                                    <li><a class="a-recent" href="#.">{{cat.title}}</a></li>
+
+                                </ul>
+                                {%endfor%}
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- our client end -->
+
+    <!--Footer-->
+    <footer class="footer-sec bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-logo">
+                        <div class="logo-max">
+                            <a href="#home" class="logo link" title="logo">
+                                <img src="{% static 'booking\img\lo.png' %}" alt="logo" title="Logo" class="logo-default">
+                            </a>
+                        </div>
+                        <p class="footer-width pt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dignissim viverra ultrices.</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 justify-content-center d-flex">
+                    <div class="footer-para">
+                        <div class="contact-social-icon pb-10">
+                            <ul class="social-icons mb-0">
+                                <li><a href="#." class="facebook-bg-hvr"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
+                                <li><a href="#." class="twitter-bg-hvr"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
+                                <li><a href="#." class="linkedin-bg-hvr"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> </li>
+                                <li><a href="#." class="instagram-bg-hvr"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
+                            </ul>
+                        </div>
+                        <p class="copyright-para">© 2019 ROYAL. Made With Love By <a href="javascript:void(0);" class="grey"> SURVIVAL</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+    <!--G0 Top-->
+    <div class="go-top"><i class="fas fa-chevron-up"></i><i class="fas fa-chevron-up"></i></div>
+    <!--End Go Top-->
+
+
+</div>
+
+<!-- JavaScript -->
+<script src="{% static 'booking\js\bundle.min.js' %}"></script>
+<!-- Plugin Js -->
+
+<script src="{% static 'booking\js\jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'booking\js\owl.carousel.min.js' %}"></script>
+<script src="{% static 'booking\js\jquery.cubeportfolio.min.js' %}"></script>
+<script src="{% static 'booking\js\jquery.appear.js' %}"></script>
+<script src="{% static 'booking\js\wow.min.js' %}"></script>
+<script src="{% static 'booking\js\flip.js' %}"></script>
+<script src="{% static 'booking\js\jquery-ui.bundle.js' %}"></script>
+<script src="{% static 'booking\js\select2.min.js' %}"></script>
+<script src="{% static 'booking\js\jquery.hoverdir.js' %}"></script>
+<script src="{% static 'booking\js\hover-item.js' %}"></script>
+<script src="{% static 'booking\js\slick.min.js' %}"></script>
+<script src="{% static 'booking\js\parallaxie.min.js' %}"></script>
+<!-- REVOLUTION JS FILES -->
+<script src="{% static 'booking\js\jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'booking\js\jquery.themepunch.revolution.min.js' %}"></script>
+<!-- SLIDER REVOLUTION EXTENSIONS -->
+<script src="{% static 'booking\js\extensions\revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'booking\js\extensions\revolution.extension.video.min.js' %}"></script>
+<!-- custom script -->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyCo_pcAdFNbTDCAvMwAD19oRTuEmb9M50c"></script>
+
+<script src="{% static 'booking\js\script.js' %}"></script>
+
+</body>
+</html>
+

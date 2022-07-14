@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="icon" href="{% static 'booking\img\favicon.ico' %}">-->
+    <!-- Bundle -->
+<!--     <link rel="stylesheet" href="{% static 'booking\css\bundle.min.css' %}">-->
+<!--    &lt;!&ndash; Plugin Css &ndash;&gt;-->
+<!--     <link rel="stylesheet" href="{% static 'booking\css\revolution-settings.min.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'booking\css\jquery.fancybox.min.css' %}">-->
+
+<!--    <link rel="stylesheet" href="{% static 'booking\css\owl.carousel.min.css' %}">-->
+
+<!--    <link rel="stylesheet" href="{% static 'booking\css\swiper.min.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'booking\css\cubeportfolio.min.css' %}">-->
+
+<!--    <link rel="stylesheet" href="{% static 'booking\css\LineIcons.min.css' %}">-->
+
+<!--    <link rel="stylesheet" href="{% static 'booking\css\jquery-ui.bundle.css' %}">-->
+<!--      <link rel="stylesheet" href="{% static 'booking\css\select2.min.css' %}">-->
+<!--    <link rel="stylesheet" href="../vendor/css/animate.css">-->
+    <!-- Style Sheet -->
+   <link rel="stylesheet" href="{% static 'booking\css\style.css' %}">
+
+    <style>
+    body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1613649523_38-p-fon-dlya-kulinarnoi-prezentatsii-71.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+    .w-100 {
+    width: 30%!important;
+}
+.btn.btn-large.rev-slider {
+    font-size: 17px;
+    padding: 10px 34px;
+    line-height: 25px;
+    width: 140px;
+    letter-spacing: 0.5px;
+}
+.btn.btn-rounded {
+    border-radius: 50px;
+    margin-left: 490px;
+
+}
+form {
+    margin: 136px auto 0;
+}
+input {
+    width: 500px !important;
+}
+.form {
+    position: relative;
+    width: 700px;
+    padding: 75px 30px 5px 30px;
+    border: 1px solid black;
+    background-color: white;
+
+    border-radius: 10px;
+}
+.form-control {
+    border: 1px solid #c2c4ca;
+    padding: 0 0 0 10px;
+    width: 500px;
+    line-height: 40px;
+    height: 53px;
+    border-radius: 15px;
+    font-size: 15px;
+    z-index: 9;
+}
+.form-control {
+    border: 10x solid #c2c4ca;
+    padding: 0 0 0 10px;
+    line-height: 40px;
+    height: 53px;
+    border-radius: 15px;
+    font-size: 15px;
+    z-index: 9;
+}
+
+.form-control {
+    border: 1px solid #c2c4ca;
+    padding: 0 0 0 10px;
+    line-height: 40px;
+    height: 53px;
+    border-radius: 3px;
+    font-size: 15px;
+    z-index: 9;
+}
+.form-control {
+    height: 50px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    min-width: 670px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+</style>
+</head>
+<body>
+<form action="{% url 'addpost' %}" method="POST" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+
+
+    {{form.photo}}
+<p >{{form.author}}</p>
+
+    {{form.title}}
+    {{form.slug}}
+    {{form.content}}
+<!--    <div class="form-group mb-20">-->
+<!--        <input type="file" class="form-control para-color" placeholder="Photo" name="photo" required="">-->
+<!--    </div>-->
+
+<!--    <div class="form-group mb-20">-->
+<!--        <input type="text" class="form-control para-color" placeholder="Title" name="title" required="" >-->
+<!--    </div>-->
+
+
+<!--    <div class="form-group mb-20">-->
+<!--        <input type="text" class="form-control para-color" placeholder="Slug" name="slug" required="" >-->
+<!--    </div>-->
+
+
+<!--    <div class="form-group mb-20">-->
+<!--        <input type="text" class="form-control para-color" placeholder="Text" name="content" required="" >-->
+<!--    </div>-->
+
+
+<!--    <div class="form-group mb-20">-->
+<!--        <input type="date" class="form-control para-color" placeholder="Created date" name="created_date" required="" >-->
+<!--    </div>-->
+
+ <div class="text-1 text-11 margin-sm">
+     <button type="submit" class="btn btn-green btn-large rev-slider btn-rounded w-100">Add post</button>
+</div>
+
+</form>
+<style>
+
+</style>
+</body>
+</html>
